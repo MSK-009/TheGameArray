@@ -18,7 +18,7 @@ body {
 .left {
     width: 25vw;
     margin-top: 10px;
-    height: 95vh;
+    height: 98vh;
 
 
 }
@@ -27,7 +27,7 @@ body {
     width: 75vw;
     margin-top: 10px;
     overflow: hidden auto;
-    height: 95vh;
+    height: 98vh;
     position: relative;
 }
 
@@ -414,6 +414,36 @@ hr {
     text-decoration: overline;
 }
 
+.home-more{
+    background-color: #4876ff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.home-intro > span{
+    margin: 0;
+    padding: 0;
+    position:absolute;
+    left: 0px;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    font-size: 52px;
+    background: linear-gradient(to right, #4876ff, #5fd35d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+@media screen and (max-width: 1430px) {
+    .home-intro > span {
+        font-size: 40px;
+    }
+}
+
 @media screen and (max-width: 860px) {
     .left {
         width: 0vw;
@@ -423,6 +453,10 @@ hr {
         z-index: 10;
         background-color: #040f18;
         padding-right: 10px;
+    }
+
+    .home-intro > span {
+        font-size: 40px;
     }
 
     .right {
@@ -446,6 +480,10 @@ hr {
     }
     .menu{
         margin-left: 10px;
+    }
+
+    .home-intro > span {
+        font-size: 20px;
     }
 }
 

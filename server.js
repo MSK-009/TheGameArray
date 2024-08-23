@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const { Pool } = require('pg');
 const bodyParser = require('body-parser');
-const { setTimeout } = require('timers/promises');
 const axios = require('axios');
 const session = require('express-session');
 const bcrypt = require('bcrypt');
@@ -417,12 +416,12 @@ app.post('/save-game-status', async (req, res) => {
         if (status === 'played') {
             await pool.query(
                 'INSERT INTO PlayedGames (gameid, userid, userplaytime, datecompleted) VALUES ($1, $2, $3, $4) ON CONFLICT (gameid, userid) DO UPDATE SET userplaytime = $3, datecompleted = $4',
-                [gameid, userid, playtime, completedDate]
+                [gameid, userId, playtime, completedDate]
             );
         } else if (status === 'to-play') {
             await pool.query(
                 'INSERT INTO ToPlayGames (gameid, userid, dateadded) VALUES ($1, $2, CURRENT_TIMESTAMP) ON CONFLICT (gameid, userid) DO NOTHING',
-                [gameid, userid]
+                [gameid, userId]
             );
         }
 
