@@ -1,11 +1,3 @@
-<video width="600" controls>
-  <source src="https://drive.google.com/file/d/180e9Ut3oh40jQFUlU_pIieuvyBZ43APo/view?usp=sharing" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-https://drive.google.com/file/d/180e9Ut3oh40jQFUlU_pIieuvyBZ43APo/view?usp=sharing
-
-
 Overview:
 This project is a comprehensive web-based platform designed for gamers to explore, rate, and discuss video games. Users can search for games, add them to their personal game library, rate them, and participate in discussions in forum topics. The platform integrates with the RAWG.io API to provide detailed game information, and it features a custom user authentication system with PostgreSQL for storing user data.
 
